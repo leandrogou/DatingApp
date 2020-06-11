@@ -20,7 +20,7 @@ export class AuthGuard implements CanActivate {
     if(this.authService.loggedIn()){
       return true;
     }
-    this.alertify.error('Você não passará!!!');
+    this.alertify.error('Você precisa estar logado para acessar essa página');
     this.router.navigate(['/home']);
     return false;
   }

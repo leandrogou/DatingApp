@@ -1,0 +1,26 @@
+[
+  '{{repeat(5)}}',
+  {
+    Username: '{{firstName("female")}}',
+    Sexo: 'female',
+    Nascimento: '{{date(new Date(1950,0,1), new Date(2001, 11, 31),"YYYY-MM-dd)}}',
+    Password: 'password',
+    Apelido: function(){ return this.Username; },
+    CriadoEm: '{{date(new Date(2019,0,1), new Date(2020, 5, 17), "YYYY-MM-dd")}}',
+    UltimoLogin: function(){return this.Created; },
+    Introducao: '{{lorem(1, "paragraphs")}}',
+    ProcurandoPor: '{{lorem(1, "paragraphs")}}',
+    Interesses: '{{lorem(1, "sentences")}}',
+    Cidade: '{{city}}',
+    Pais: '{{country}}',
+    Photos: [
+      {
+        url: function(num) {
+          return 'https://randomuser.me/api/portraits/women/' + num.integer(1,99) + '.jpg';
+        },
+        Principal: true,
+        Descricao: '{{lorem()}}'
+      }
+      ]
+  }
+]
