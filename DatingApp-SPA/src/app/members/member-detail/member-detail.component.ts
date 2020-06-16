@@ -24,11 +24,12 @@ export class MemberDetailComponent implements OnInit {
 
     this.galleryOptions = [{
       width: '500px',
-      height: '500px',
+      height: '700px',
       imagePercent: 100,
       thumbnailsColumns: 4,
       imageAnimation: NgxGalleryAnimation.Slide,
-      preview: false
+      preview: false,
+      
     }];
     this.galleryImages = this.getImages();
   }
