@@ -1,0 +1,55 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-sm-4">
+<div class="card">
+  <img class="card-img-top img-thumbnail" src="{{user.photoUrl}}" alt="{{user.apelido}}">
+<div class="card-body">
+  <div>
+    <strong>Localização:</strong>
+    <p>{{user.cidade}}, {{user.estado}}, {{user.pais}}</p>
+  </div>
+  <div>
+    <strong>Idade:</strong>
+    <p>{{user.age}}</p>
+  </div>
+  <div>
+    <strong>Ultimo Login:</strong>
+    <p>{{user.ultimoLogin}}</p>
+  </div>
+  <div>
+    <strong>Membro desde:</strong>
+    <p>{{user.criadoEm}}</p>
+  </div>
+</div>
+<div class="card-footer">
+  <div class="btn-group d-flex">
+    <button class="btn btn-primary w-100">Like</button>
+    <button class="btn btn-success w-100">Mensagem</button>
+  </div>
+</div>
+</div>
+    </div>
+    <div class="col-sm-8">
+<div class="tab-panel">
+ <tabset class="member-tabset">
+   <tab heading="About {{user.apelido}}">
+     <h4>Descrição</h4>
+     <p>{{user.introducao}}</p>
+     <h4>Procurando Por</h4>
+     <p>{{user.procurandoPor}}</p>
+   </tab>
+   <tab heading="Intetests">
+<h4>Interesses</h4>
+<p>{{user.interesses}}</p>
+   </tab>
+   <tab heading="Photos">
+   <ngx-gallery style="display: inline-block; margin-bottom: 20px; align-content: center;" [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+  </tab>
+  <tab heading="Messages">
+    <p>Mensagens aparecem aqui</p>
+  </tab>
+ </tabset>
+</div>
+    </div>
+  </div>
+</div>
